@@ -1,12 +1,14 @@
-<h1>Welcome my name is Piggy. That's MR Pig for you.  I will help you with your finances.</h1>
+<h1 class="front">Welcome to Spending Tracker! </h1>
+<h2 class="front">No need for more expleneations.</h2>
+<hr />
 <div class="content">
-  <h2>Your budget at the momement is: £ <%=@total_budget%></h2>
+  <h2 >Your budget at the momement is: £ <%=@total_budget%></h2>
 
-  <form action="/budgets" method="post">
+  <form class="front" action="/budgets" method="post">
     <h1>Add to Budget:
-    <input type="number" name="budget" id="budget"/>
-    <input class="button" type="submit" /></h1>
+    <input class="front" type="number" name="budget" id="budget"/>
+    <input  class="front"class="button" type="submit" /></h1>
   </form>
-  
+
 
 </div>
