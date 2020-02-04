@@ -1,0 +1,48 @@
+
+<h4 class="functions">Your Transactions</h4>
+<form   action="/transactions/new" method="GET">
+  <input class="button" type="submit" value="Add New Transaction" />
+</form>
+
+
+
+<div class="functions">
+<form  action="/transactions/dissect" method="post">
+  <h7>Select date from:</h7>
+  <input type="date" name="time1" value="">
+
+  <h7>Select date to:</h7>
+  <input type="date" name="time2" value="">
+  <input class="button"type="submit" name="Dissect" value="Dissect">
+</form>
+
+</div>
+
+
+<table>
+  <% for transaction in @transactions %>
+  <tr>
+    <td><form  method="get" action ="/transactions/<%= transaction.id%>">
+      <%= transaction.id%>
+      <td><%= transaction.company.name%></td>
+      <td><%= transaction.type.type %></td>
+      <td><h4>£<%= transaction.amount %></h4></td>
+      <td> <%=transaction.time%></td>
+      <td>
+        <input class="button" type="submit" name="Details" value="Detais"></td>
+      </form>
+      <td><form action="/transactions/<%= transaction.id %>/delete" method="POST">
+        <input class="button" type="submit" value="delete" />
+      </form>
+    </td>
+
+  </tr>
+  <% end %>
+
+<tr><h2>Your budget: £<%= @total_budget%></h2></tr>
+ <tr><h2 class="h7">You have: £<%= @money_left%> left in your budget.</h7></tr>
+
+  <tr><h1>Total Spend:           £<%= @total %></h1></tr>
+
+</table>
+<img class="container" src="styles/2.png" alt="picture" width="500" height="333">

@@ -1,0 +1,19 @@
+<h4 class="functions">Types</h4>
+
+<form action="/types/new" method="GET">
+  <input class="button" type="submit" value="Add New Type" />
+  </form>
+
+
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Name</th>
+  </tr>
+  <% for type in @types %>
+  <tr>
+    <td><%= type.id %></td>
+    <td><%= type.type %></td>
+  </tr>
+  <% end %>
+</table>

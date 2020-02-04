@@ -1,0 +1,19 @@
+<table>
+  <% for transaction in @transactions %>
+  <tr>
+    <td><form  method="get" action ="/transactions/<%= transaction.id%>">
+      <%= transaction.id%>
+      <td><%= transaction.company.name%></td>
+      <td><%= transaction.type.type %></td>
+      <td><h3>£<%= transaction.amount %></h3></td>
+      <td> <%=transaction.time%></td>
+      <td>
+        <input class="button" type="submit" name="Update" value="update"></td>
+      </form>
+      <td><form action="/transactions/<%= transaction.id %>/delete" method="POST">
+        <input class="button" type="submit" value="delete" />
+      </form>
+    </td>
+
+  </tr>
+  <% end %>

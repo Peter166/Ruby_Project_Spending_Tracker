@@ -1,0 +1,17 @@
+<div class="functions">
+<form method="get" action="/companies/<%= company.id %>/update">
+<p>Company: <%=@company.id %> </p>
+<p>Type: <%=@company.type %> </p>
+<p>Amount: <%=@company.status %> </p>
+
+
+
+
+  <input class="button" type="submit"  value="Change">
+</form>
+</div>
+
+<form  method="post" action="/companies/<%= @company.id %>/delete">
+  <input class="button" type="submit" value="Delete Transaction">
+
+</form>

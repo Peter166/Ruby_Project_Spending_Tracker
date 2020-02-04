@@ -1,0 +1,15 @@
+<div class="functions">
+<form method="get" action="/transactions/<%= @transaction.id %>/edit">
+<p>Company: <%=@transaction.company.name %> </p>
+<p>Type: <%=@transaction.type.type %> </p>
+<p>Amount: <%=@transaction.amount %> </p>
+<p>ID: <%=@transaction.id %> </p>
+
+
+</div>
+  <input class="button" type="submit"  value="Change Transaction">
+
+<form  method="post" action="/transactions/<%= @transaction.id %>/delete">
+  <input class="button" type="submit" value="Delete Transaction">
+
+</form>

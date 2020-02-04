@@ -1,0 +1,134 @@
+
+
+.functions{
+  background-color: black;
+  color: white;
+}
+
+.button {
+  background-color: #b3b3b3; /* Green */
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: center;
+  font-size: 16px;
+  border-radius: 0%;
+  overflow: auto;
+}
+.button input.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.button input:hover:not(.active) {
+  background-color: red;
+  color: white;
+}
+
+h1  {
+  text-align: left;
+}
+
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 15px;
+
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #b3b3b3;
+}
+
+
+
+
+img {
+  width: 100%;
+  height: auto;
+  opacity: 0.6;
+}
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+.h7 {
+  text-align: right;
+
+}
+li a {
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  margin: 0px;
+  padding: 0;
+  width: 200px;
+  background-color: black;
+  position:fixed;
+  height: 100%;
+  overflow: auto;
+
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: black;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+  background-color: #dddddd;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
