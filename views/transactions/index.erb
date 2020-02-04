@@ -39,8 +39,8 @@
   </tr>
   <% end %>
 
-<tr><h2>Your budget: £<%= @total_budget%></h2></tr>
- <tr><h2 class="h7">You have: £<%= @money_left%> left in your budget.</h2></tr>
+<tr><h2>Your budget: £<%= @total_budget.to_f%></h2></tr>
+ <tr><h2 class="h7">You have: £<%= @money_left.round(2)%> left in your budget.</h2></tr>
 
   <tr><h1>Total Spend:           £<%= @total %></h1></tr>
 
