@@ -56,19 +56,9 @@ class Company
     result.status = x
     result.update
     return result
-    p result
   end
 
-  def status_deactive()
 
-    sql = "SELECT * FROM companies WHERE id = $1"
-    values = [id]
-    company = SqlRunner.run( sql, values )
-    result = Company.new( company.first )
-    result.status = 'f'
-    result.update
-    return result
-  end
 
 
   def self.find( id )

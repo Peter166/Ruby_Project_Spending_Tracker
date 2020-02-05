@@ -1,8 +1,47 @@
 
 <h4 class="functions">Your Transactions</h4>
+<table>
+  <tr>
 <form   action="/transactions/new" method="GET">
   <input class="button" type="submit" value="Add New Transaction" />
-</form>
+</form></tr>
+
+
+<tr>   </tr>
+
+  <tr><form   action="/transactions/by_companies" method="post">
+    <label>
+      <select name="company_id">
+        <% for transaction in @transactions %>
+
+        <option value="<%= transaction.id %>"><%= transaction.company.name %></option>
+        <% end %>
+      </select>
+
+      </label>
+
+
+    <input class="button" type="submit" value="Sort by company" />
+  </form></tr>
+
+<tr>    </tr>
+  <tr><form   action="/transactions/by_types" method="post">
+    <label>
+      <select name="type_id">
+        <% for transaction in @transactions %>
+        <option value="<%= transaction.type_id %>"><%= transaction.type.type %></option>
+        <% end %>
+      </select>
+      </label>
+
+    <input class="button" type="submit" value="Sort by type" />
+  </form></tr>
+
+
+
+
+
+
 
 
 
@@ -17,6 +56,14 @@
 </form>
 
 </div>
+
+
+<tr><h2>Your budget: £<%= @total_budget.to_f%></h2></tr>
+<tr><h2 class="h7">You have: £<%= @money_left.round(2)%> left in your budget.</h2></tr>
+
+<tr><h1>Total Spend:           £<%= @total %></h1></tr>
+
+</table>
 
 
 <table>
@@ -39,10 +86,4 @@
   </tr>
   <% end %>
 
-<tr><h2>Your budget: £<%= @total_budget.to_f%></h2></tr>
- <tr><h2 class="h7">You have: £<%= @money_left.round(2)%> left in your budget.</h2></tr>
-
-  <tr><h1>Total Spend:           £<%= @total %></h1></tr>
-
-</table>
-<img class="container" src="styles/2.png" alt="picture" width="500" height="333">
+<!-- <img class="container" src="styles/2.png" alt="picture" width="500" height="333"> -->

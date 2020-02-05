@@ -49,7 +49,6 @@ get '/transactions/:id/edit' do
 end
 
 post '/transactions/budget'do
-binding.pry
 @budget = params[:budget]
 end
 
@@ -57,7 +56,6 @@ post "/transactions/dissect" do
 
 
   @transactions = Transaction.time(params[:time1],  params[:time2])
-  p @transactions
   erb(:"/transactions/dissect")
 end
 
@@ -69,7 +67,16 @@ end
 
 
 
+post '/transactions/by_companies' do
 
+@transactions = Transaction.all_companies(params[:company_id])
+erb(:"/transactions/by_companies")
+end
+
+post '/transactions/by_types' do
+@transactions = Transaction.all_types(params[:type_id])
+erb(:"/transactions/by_types")
+end
 
 
 

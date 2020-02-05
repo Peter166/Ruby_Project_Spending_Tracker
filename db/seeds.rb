@@ -9,8 +9,6 @@ Company.delete_all()
 Type.delete_all()
 Budget.delete_all()
 
-# budget1 = Budget.new({'budget' => 300})
-# budget1.save
 
 
 company1 = Company.new({"name" => 'ASDA','status'=> 't'})

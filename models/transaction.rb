@@ -109,6 +109,18 @@ class Transaction
     return arr.map { |transaction| Transaction.new(transaction) }
   end
 
+  def self.all_companies(company_id)
+    sql ="SELECT * FROM transactions WHERE company_id = $1"
+    values =[company_id]
+    transactions = SqlRunner.run(sql, values)
+    return transactions.map { |transaction| Transaction.new(transaction) }
+  end
 
 
+  def self.all_types(type_id)
+    sql ="SELECT * FROM transactions WHERE type_id = $1"
+    values =[type_id]
+    transactions = SqlRunner.run(sql, values)
+    return transactions.map { |transaction| Transaction.new(transaction) }
+  end
 end
