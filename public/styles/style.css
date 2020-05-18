@@ -1,5 +1,6 @@
 
 body {
+  /* background-color: #dddddd; */
   background-image: url("background.jpeg");
   background-repeat:repeat-x;
 }
